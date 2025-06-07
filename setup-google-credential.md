@@ -1,6 +1,6 @@
 Here's the guide converted to markdown:
 
-```markdown
+
 # How to Connect Google APIs to n8n
 
 This guide will help you configure your Google Cloud Console (GCP) and integrate services such as Google Drive, Gmail, Google Docs, Sheets, Slides, and Calendar with n8n.
@@ -11,18 +11,13 @@ Visit the Google Cloud Console (GCP) at:
 Select the right Gmail account.
 
 ## Step 2: Payment Settings and Verification
-You will need to input your card details.  
-You must use a physical Mastercard or Visa card, without any local restrictions.  
-Otherwise, Google will not accept the card, and you won't be able to proceed with the setup.
-
-> **Note:**  
 > - You will not be charged.  
 > - If it's your first time, you'll receive $300 Google Cloud credits (valid for 3 months).
 
 ## Step 3: Create a Project
 You will have a default project called “My First Project” or “No Organization”.  
 You can create a new project and give it a preferred name.  
-For example: **n8n connection**
+For example: **n8n-project**
 
 In the top-left corner, click on “My First Project”.  
 Switch to the new project you just created.
@@ -73,24 +68,6 @@ Click **Continue** & **Create**.
    - **Authorized redirect URI**:  
      > **Note:** This is not the **Authorized JavaScript origins** + Add URI.
 
-For cloud version, you’ll need to find your URI:  
-Find this inside n8n by creating a workflow, selecting a **Google Drive node** → adding any actions (e.g., “copy file”) → **Credential to connect with** → **Create new credential** → **OAuth Redirect URL**.  
-Example:  
-```
-
-[https://oauth.n8n.cloud/oauth2/callback](https://oauth.n8n.cloud/oauth2/callback)
-
-```
-
-For self-hosted version, you’ll need to find your URI:  
-Find this inside n8n by creating a workflow, selecting a **Google Drive node** → adding any actions (e.g., “copy file”) → **Credential to connect with** → **Create new credential** → **OAuth Redirect URL**.  
-Example:  
-```
-
-[https://n8n.srv43242.hstgr.cloud/rest/oauth2-credential/callback](https://n8n.srv43242.hstgr.cloud/rest/oauth2-credential/callback)
-
-```
-
 Paste this **OAuth Redirect URL** from n8n into **Authorized redirect URIs** in Google Cloud Console.  
 Click **Create** in Google Cloud Console.
 
@@ -119,6 +96,3 @@ Repeat steps 1-7 for the following APIs:
 - Google Sheets API  
 - Google Calendar API  
 - Google Slides API
-```
-
-This markdown version should make it easy to format and display the guide on platforms like GitHub or other markdown readers.
