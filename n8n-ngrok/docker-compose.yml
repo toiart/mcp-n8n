@@ -38,6 +38,7 @@ services:
       - N8N_COMMUNITY_PACKAGES_ENABLED=true
       - N8N_EDITOR_BASE_URL=${NGROK_URL}
       - WEBHOOK_URL=${NGROK_URL}
+      - GENERIC_TIMEZONE=Asia/Bangkok
     ports:
       - 5678:5678
     links:
